@@ -21,23 +21,23 @@ Tools Used
 
 Identified Vulnerabilities & Findings
 
-5a. Potential Path Traversal (Automated Scan Finding)
+5a. Potential Path Traversal (OWASP ZAP Passive Scan)
 Risk Level: High  
 OWASP ZAP flagged a potential path traversal vulnerability. This could allow unauthorized access to restricted files.
 This was not confirmed due to scope limitations and may represent a false positive.
 
-5b. Potential SQL Injection (Automated Scan Finding)
+5b. Potential SQL Injection (OWASP ZAP Passive Scan)
 Risk Level: High 
 The scan identified patterns suggesting a possible SQL Injection vulnerability, which could allow database manipulation if exploited.
 This finding is unverified and based only on automated analysis.
 
-5c. Additional Observations from Automated Scan  
+5c. Additional Observations from OWASP ZAP Passive Scan
 Risk Level: Medium–Low  
 Additional alerts were raised related to configuration and response handling, which may contribute to security weaknesses if not properly managed.
 
 Information Disclosure via HTTP Headers  
 Risk Level: Low  
-The server exposes implementation details (e.g., server type), which may assist attackers in identifying technologies in use.
+The server exposes implementation details, which may assist attackers in identifying technologies in use.
 
 Missing or Limited Security Headers  
 Risk Level: Low  
@@ -52,9 +52,10 @@ The scan revealed open ports:
 While expected for a public website, open ports represent potential entry points and must be properly secured.
 
 Risk Summary
-- High Risk: 2 (Unverified – tool-generated findings)  
-- Medium Risk: 1  
-- Low Risk: Multiple configuration-related issues  
+- High Risk: 2 
+- Medium Risk: 4  
+- Low Risk: 3
+- Informal: 1 
 
 Recommendations
 - Validate automated scan findings to rule out false positives  
